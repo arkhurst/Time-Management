@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="container" alignment="center" hgap="10" stylesheets="/sample/main.css" vgap="10" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+
+      <AnchorPane prefHeight="401.0" prefWidth="361.0" style="-fx-background-color: #40C85E;" stylesheets="/sample/main.css">
+         <children>
+            <HBox layoutX="54.0" layoutY="100.0" prefHeight="74.0" prefWidth="242.0" style="-fx-background-color: #222224;">
+               <children>
+                  <Label fx:id="time" prefHeight="70.0" prefWidth="195.0" text="${controller.timerText}" textFill="#f5f3f3">
+                     <font>
+                        <Font name="Ebrima" size="48.0" />
+                     </font>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <Button fx:id="DEBUG" layoutX="137.0" layoutY="14.0" onAction="#DEBUG" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: #40C85E;" text="DEBUG" textFill="#f5f5f5" textOverrun="CLIP">
+               <font>
+                  <Font name="Georgia Bold" size="14.0" />
+               </font></Button>
+            <Label fx:id="title" layoutX="90.0" layoutY="57.0" prefHeight="17.0" prefWidth="184.0" text="Pomodoro" textFill="#fcfcfc">
+               <font>
+                  <Font name="Ebrima Bold" size="24.0" />
+               </font>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Label>
+            <Button fx:id="resume" layoutX="90.0" layoutY="201.0" mnemonicParsing="false" onAction="#handlePlay" style="-fx-background-color: #40C85E;" text="RESUME" textFill="#f2eded">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="182.0" layoutY="201.0" mnemonicParsing="false" onAction="#handleRestart" style="-fx-background-color: #40C85E;" text="RESTART" textFill="#f2eded">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <TextArea fx:id="message" layoutX="66.0" layoutY="266.0" prefHeight="48.0" prefWidth="217.0" promptText="Sup, What you doing?">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+            <Circle fill="DODGERBLUE" layoutX="182.0" layoutY="350.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" style="-fx-fill: #E44A5A;" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
